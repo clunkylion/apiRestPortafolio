@@ -1,5 +1,5 @@
 const express = require('express');
-const mysqlConnection = require('./src/database');
+//const mysqlConnection = require('./src/database');
 //settings
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
