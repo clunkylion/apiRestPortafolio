@@ -4,7 +4,7 @@ const mysqlConnection = require('./src/database');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const app = express();
-
+app.set("port", PORT);
 app.use(bodyParser.urlencoded({
     extended: true
 }));
