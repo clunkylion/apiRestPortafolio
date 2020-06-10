@@ -15,6 +15,9 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
     res.send('welcome to my API');
 })
+app.get('/home', (req, res) => {
+    res.send('<h1>Bienvenidos a la API</h1>');
+})
 //ruta de los contactos
 app.use(require('./src/routes/contacto'));
 
