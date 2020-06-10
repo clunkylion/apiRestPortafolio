@@ -6,7 +6,7 @@ const mysqlConnection = require('../database');
 router.post('/contacto', (req,res) =>{
     const sql = 'select * from contacto';
     mysqlConnection.query(sql, (err, results)=>{
-        if (!err){
+        if (err){
             console.log("Hay un error en la conexion");
         }
         if (results.length > 0) {
@@ -21,7 +21,7 @@ router.post('/contacto/:id', (req,res) =>{
     const {id} = req.params;
     const sql = `select * from contacto where id = ${id}`;
     mysqlConnection.query(sql, (err, result)=>{
-        if (!err){
+        if (err){
             console.log("Hay un error en la conexion");
         }
         if (result.length > 0) {
